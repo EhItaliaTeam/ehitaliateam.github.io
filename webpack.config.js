@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var nodeExternals = require('webpack-node-externals');
 var path = require('path');
 var fs = require('fs');
 
@@ -13,16 +14,39 @@ fs.readdirSync('node_modules')
 
 module.exports = {
   entry: './index.js',
-  mode: 'development',
-  target: 'node',
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'app.js'
+    filename: 'app.js',
+    path: path.join(__dirname, 'build')
   },
-  externals: nodeModules,
+  module: {
+    // rules: [
+    //   { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
+    //  ]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['@babel/preset-env'] },
+        }],
+      },
+    ]
+  },
+  mode: 'development',
+  node: {
+    __dirname: false
+  },
+  // externals: nodeModules,
+  // externals: [nodeExternals({
+  //   whitelist: ['/node_modules/d3*']
+  // })],
   plugins: [
     // new webpack.IgnorePlugin(/\.(css|less)$/),
     // new webpack.BannerPlugin({ raw: true, entryOnly: false })
   ],
+  // resolve: {
+  //   alias: { "d3": path.join(__dirname, "dist/d3.js") },
+  // },
   devtool: 'sourcemap'
 }

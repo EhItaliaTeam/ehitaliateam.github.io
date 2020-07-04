@@ -1,4 +1,6 @@
 # WPI
 
 ### TODOS:
-- fix webpack-d3 import
+
+- [x] fix webpack-d3 import
+- [ ] add css loader | sass loader to webpack

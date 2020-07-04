@@ -1,4 +1,9 @@
-const run = (args) => {
+import * as d3 from 'd3'
+
+import {createMenu} from './menu/menu';
+
+let bootApp = (args) => {
+  
   let appContainer = document.getElementById('d3-app');
   let dims = appContainer.getBoundingClientRect();
   const width = dims.width;
@@ -9,6 +14,7 @@ const run = (args) => {
     bottom: 0,
     left: 0
   };
+
   // Method definition? rx?
   var parseDate = d3.timeDay(); // .format('%d-%b-%y').parse;
   var container = d3.select('#d3-app')
@@ -25,6 +31,8 @@ const run = (args) => {
         .attr("height", 50)
         .text(`D3 version: ${d3.version}`);
 
+  createMenu(container);
+
   // d3.csv('/data/sample.csv', (error, dataset) => {
   //   dataset.forEach((data) => {
   //     console.log(data)
@@ -37,4 +45,4 @@ const run = (args) => {
 
 };
 
-export default run;
+export var startApp = bootApp;
