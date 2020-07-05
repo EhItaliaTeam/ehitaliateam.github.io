@@ -1601,21 +1601,21 @@ Per esempio, quando usiamo il comando <code>cat file1</code> quel dato/text che 
 # ora il risultato viene scritto sul file result_of_ls.txt
 ls &gt;&gt; result_of_ls.txt
 # Questo scrive in modalita' append il dato sul file result_of_ls.txt
-</code></pre><p>Another incredibly useful feature is the <strong>pipe</strong> feature, reprsented with this symbol <code>|</code>. It will take the stdout and redirect it into another program. Here is an example:</p>
+</code></pre><p>Un'altra caratteristica incredibilmente utile è la <strong>pipe</strong> caratteristica, rappresentata da questo simbolo <code>|</code>. Prende lo stdout e lo reindirizza in un altro programma. Ecco un esempio:</p>
 <pre><code class="lang-bash">ls -la | less
 </code></pre>
-<p>This will take the stdout from <code>ls -la</code> and forward/redirect it into the <code>less</code> program. Using the <strong>pipe</strong> you can now chain different commands. </p>
-<p>The file descriptor for <strong>stdout</strong> is: <strong>1</strong></p>
+<p>Questo prenderà lo stdout da <code>ls -la</code> e inoltrarlo / reindirizzarlo nel file <code>less</code> programma. Usando il <strong>pipe</strong> ora si possono concatenare diversi comandi. </p>
+<p>Il descrittore di file per <strong>stdout</strong> is: <strong>1</strong></p>
 <h3 id="stderr">Stderr</h3>
-<p>Stderr is the stream used for outputting error messages. So if a program fails for whatever reason. For example, if we try to copy a file that does not exist, this will be the stdrr output:</p>
+<p>Stderr è il flusso utilizzato per inviare messaggi di errore. Quindi se un programma fallisce per qualsiasi motivo. Ad esempio, se proviamo a copiare un file che non esiste, questo sarà l'output stdrr:</p>
 <pre><code>cp thisfiledoesnotexist aaaaaaaaaa
 cp: cannot stat &apos;thisfiledoesnotexist&apos;: No such file or directory
-</code></pre><p>This is a common way for stderr to present itself, just straight out into the terminal. But sometimes stderr gets sent to a log file.</p>
-<p>Stderr is useful because with it we can separate between <strong>stdout</strong> and <strong>stderr</strong>. However, to the eye it might be difficult to distinguish what output is <strong>stdout</strong> and what output is <strong>stderr</strong>.</p>
-<p>One easy way to determine is the output is <strong>stderr</strong> or <strong>stdout</strong> is to simply redirect it into a file. Because by default you only redirect <strong>stdout</strong>, and not <strong>stderr</strong>.</p>
+</code></pre><p>Questo è un modo comune per stderr di presentarsi, appena uscito direttamente nel terminale. Ma a volte stderr viene inviato a un file di registro.</p>
+<p>Stderr è utile perché con esso possiamo separare tra <strong>stdout</strong> e <strong>stderr</strong>. Tuttavia, per gli occhi potrebbe essere difficile distinguere quale sia l'output <strong>stdout</strong> e qual è l'output <strong>stderr</strong>.</p>
+<p>Un modo semplice per determinare è l'output <strong>stderr</strong> o <strong>stdout</strong>è semplicemente reindirizzarlo in un file. Perché di default reindirizzi solo <strong>stdout</strong>, e non <strong>stderr</strong>.</p>
 <pre><code class="lang-bash">cp thisfiledoesnotexist aaaaaaaaaa &gt; result.txt
 cp: cannot <span class="hljs-built_in">stat</span> <span class="hljs-string">&apos;thisfiledoesnotexist&apos;</span>: No such file or directory
-<span class="hljs-comment"># If we now look at result.txt we will find that it is empty. Since the error-text we recieved could not be redirected into the textfile, since it is stderr and not stdout.</span>
+<span class="hljs-comment"># Se ora guardiamo result.txt scopriremo che è vuoto. Poiché il testo dell'errore che abbiamo ricevuto non può essere reindirizzato nel file di testo, poiché è stderr e non stdout.</span>
 </code></pre>
 <h3 id="filters">Filters</h3>
                         
