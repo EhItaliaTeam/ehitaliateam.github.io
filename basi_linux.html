@@ -92,7 +92,7 @@
     
         
         <li>
-            <a href="https://www.gitbook.com/book/sushant747/total-oscp-guide" target="_blank" class="custom-link">Total OSCP Guide</a>
+            <a href="index.html" target="_blank" class="custom-link">Hacker 8.0</a>
         </li>
     
     
@@ -100,30 +100,13 @@
     
     <li class="divider"></li>
     
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-        </li>
     
         <li class="chapter " data-level="1.2" data-path="the_basics.html">
             
                 <a href="basi.html">
             
                     
-                    The Basics
+                    Le Basi
             
                 </a>
             
@@ -146,12 +129,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1.1" data-path="basics_of_linux.html">
+        <li class="chapter active" data-level="1.2.1.1" data-path="basi_linux.html">
             
                 <a href="basi_linux.html">
             
                     
-                    Basics of Linux
+                    Basi Di Linux
             
                 </a>
             
@@ -1618,6 +1601,120 @@ cp: cannot <span class="hljs-built_in">stat</span> <span class="hljs-string">&ap
 <span class="hljs-comment"># Se ora guardiamo result.txt scopriremo che è vuoto. Poiché il testo dell'errore che abbiamo ricevuto non può essere reindirizzato nel file di testo, poiché è stderr e non stdout.</span>
 </code></pre>
 <h3 id="filters">Filters</h3>
+ <p>Ci sono alcuni programmi che sono particolarmente utili da usare insieme alle pipe. Possono anche essere usati come programmi autonomi ma spesso li vedrai insieme al pipe</p>
+<p><code>sort</code></p>
+<pre><code>sort test.txt
+</code></pre><p><code>uniq</code></p>
+<pre><code>sort -u test.txt
+sort test.txt | uniq
+cat filename | sort -u &gt; newFileName
+</code></pre><p><code>grep</code></p>
+<p><code>head</code></p>
+<p><code>tail</code></p>
+<p><code>tr</code></p>
+<p><code>sed</code></p>
+<h3 id="editing-text">Editare Text</h3>
+<h4 id="sed">sed</h4>
+<p>Può eseguire modifiche di base su stream, vale a dire testo.</p>
+<p>Rimuovere la prima riga di  file/stream</p>
+<pre><code>sed &quot;1d&quot;
+</code></pre><h4 id="cut">cut</h4>
+<p>Cut by column</p>
+<p>Questo è un comando utile per tagliare del testo.</p>
+<p>Let&apos;s say that we have the following text, and we want to cut out the ip-address.</p>
+<pre><code>64 bytes from 192.168.0.1: icmp_req=1 ttl=255 time=4.86 ms
+</code></pre><pre><code>cut -d&quot; &quot; -f4
+</code></pre><p><code>-d</code> stands for delimiter. and <code>-f</code> for field.</p>
+<h4 id="tr---translate">tr - Translate</h4>
+<p>Transform all letter into capital letters</p>
+<pre><code>tr &quot;[:lower:]&quot; &quot;[:upper:]&quot; &lt; file1 &gt; file2
+</code></pre><p>Example<br>Remove character</p> 
+<pre><code># Remove characters
+cat file.txt | tr -d &quot;.&quot;
+# Remove and replace
+# Remove all dots and replace them with underscore.
+cat file.txt | tr &quot;.&quot; &quot;_&quot;
+</code></pre><p><a href="http://www.thegeekstuff.com/2012/12/linux-tr-command/" target="_blank">http://www.thegeekstuff.com/2012/12/linux-tr-command/</a></p>
+<h4 id="awk">awk</h4>
+<p>So awk is an advanced tool for editing text-files. It is its own programming language to it can become quite complex. Awk iterates over the whole file line by line.</p>
+<p>This is the basic structure of an awk command</p>
+<pre><code>awk &apos;/search_pattern/ { action_to_take_on_matches; another_action; }&apos; file_to_parse
+</code></pre><p>The search pattern takes regex.<br>You can exclude the search portion or the action portion.</p>
+<p>This just prints every line of the file.</p>
+<pre><code>awk &apos;{print}&apos; filename
+</code></pre><p>Filtering out specific ip-address:</p>
+<pre><code>awk &apos;/172.16.40.10.81/&apos; error.log
+</code></pre><p>Now we want to print out the fourth column of that file, we can just pipe this to cut, but we can also use awk for it, like this:</p>
+<pre><code>awk &apos;/172.16.40.10.81/ {print $4}&apos; error.log
+# Another example
+awk &apos;{print $2,$5;}&apos; error.txt
+This prints columns 2 and 5.
+</code></pre><p>We can use the -F flag to add a custom delimiter.</p>
+<pre><code>awk -F &apos;:&apos; &apos;{print $1}&apos; test.txt
+</code></pre><p>So if you are manipulating some text you might want to start the output with some info about the columns or something like that. To do that we can use the BEGIN-keyword.</p>
+<pre><code>awk &apos;BEGIN {printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3}&apos; test.txt | head
+awk &apos;BEGIN{printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3} END {printf &quot;End of the file\n&quot;}&apos; test.txt | tail
+</code></pre><p>Here we are printing IP-address    PORT to the first line of the file.</p>
+<h2 id="3-user-management">3. User management</h2>
+<p>To add a user we do:</p>
+<pre><code>adduser NameOfUser
+# On some machines it is
+useradd nameOfUser
+</code></pre><p>To add user to sudo-group:</p>
+<pre><code>adduser NameOfUser sudo
+</code></pre><p>On some machines we might not be able to edit the sudoers file because we don&apos;t have an interactive shell, in this case can you can just redirect the text into the file, like this:</p>
+<pre><code>echo &quot;username ALL=(ALL) ALL&quot; &gt;&gt; /etc/sudoers
+</code></pre><p>Check which users are in the sudo group:</p>
+<pre><code>cat /etc/group | grep sudo
+</code></pre><p>Switch user in terminal:</p>
+<pre><code>su NameOfUser
+</code></pre><p>Remove/delete user:</p>
+<pre><code>sudo userdel NameOfUser
+</code></pre><h2 id="4-permissions">4. Permissions</h2>
+<pre><code>ls -la
+</code></pre><p>Shows all the files and directories and their permission settings.</p>
+<pre><code>drwxrwxrwt 2 root root 4,0K ago  3 17:33 myfile
+</code></pre><p>Here we have 10 letters in the beginning. The first one <code>d</code> shows that it is a directory.<br>The next three letters are for read, <code>w</code> for write and <code>x</code> for execute. The first three belong to the owner, the second three to the group, and the last three to all users.</p>
+<p><a href="https://linuxjourney.com/lesson/file-permissions" target="_blank">https://linuxjourney.com/lesson/file-permissions</a></p>
+<h2 id="5-processes">5. Processes</h2>
+<p>To display information regarding the systems processes you can use the <code>ps</code> command. </p>
+<pre><code>ps -aux
+</code></pre><p><code>-a</code> stands for all
+<code>-u</code> stands for all processes by all users
+<code>-x</code> stands for all processes that don&apos;t run a <code>tty</code> </p>
+<p>If you run this command you will probably see a pretty big output. In the column for <strong>command</strong> you will see what command has been run. Every process has a Process Identification Number (<strong>PID</strong>). Something you will also see in the output.</p>
+<p>All of theses processes can actually be found in <code>/proc</code>. You just go to <code>/proc/[pid]</code>. In <code>/proc</code> you can find information about the system, and you can actually change the system if you change those files! But more on that later. What I wanted to explain is that if we look at the output from <code>ps</code> we see that some commands are in brackets. Like this:</p>
+<pre><code>root        10  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/1]
+root        12  0.0  0.0      0     0 ?        S    ene14   0:00 [migration/1]
+root        13  0.0  0.0      0     0 ?        S    ene14   0:00 [ksoftirqd/1]
+</code></pre><p>Those are usually kernel processes, and you can safely assume that no user has started them. </p>
+<p>If you want to monitor processes in real time you can use <code>top</code> or <code>htop</code>. <code>top</code> comes preinstalled on most distros. But <code>htop</code> is really a lot nicer.</p>
+<p>For <code>htop</code> the F1-10 keys might trigger OS-events. So you can use the shortcuts instead.</p>
+<pre><code>Shortcut Key    Function Key    Description
+h                    F1           Invoke htop Help
+S                    F2           Htop Setup Menu
+/                    F3           Search for a Process
+I                    F4           Invert Sort Order
+t                    F5           Tree View
+&gt;                    F6           Sort by a column
+[                    F7           Nice &#x2013; (change priority)
+]                    F8           Nice + (change priority)
+k                    F9           Kill a Process
+q                    F10         Quit htop
+</code></pre><p><a href="http://www.thegeekstuff.com/2011/09/linux-htop-examples/" target="_blank">http://www.thegeekstuff.com/2011/09/linux-htop-examples/</a></p>
+<h2 id="6-packages">6. Packages</h2>
+<p>Something that difference Linux from windows is how it handles installing new software. In windows you usually have to google around and then click on random scary download buttons that might fuck up your computer, or not. It&apos;s like a constant lottery where you win by no installing malware. In Linux that is usually not really an issue. That is because distros have their own software repositories from where you can download your software. This is kind of like an app-store except everything is free.</p>
+<p>The different major branches of teh GNU/Linux OS have their own software repositories. Ubuntu has their own, debian has their own, and so on. </p>
+<p>Different distros also have their own package-amangers. For example, Debian and ubuntu uses <code>apt</code>, while Redhat uses <code>rpm</code>, and Arch uses <code>pacman</code>. You should strick to your own package-manager, because even though chaning package-manager is possible it will probably just cause you more headache than benefits.</p>
+<h3 id="install-package">Install package</h3>
+<p>Example of how to install something with apt:</p>
+<pre><code>sudo apt-get install nmap
+</code></pre><p>If you only have a .deb file you do this to install from the terminal:</p>
+<pre><code>sudo dpkg -i /path/to/deb/file
+</code></pre><pre><code>sudo apt-get install -f
+</code></pre><h3 id="remove-packages">Remove packages</h3>
+                            
                         
     </div>
     <div class="search-results">
