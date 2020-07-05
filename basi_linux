@@ -1,0 +1,2088 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basics of Linux · Total OSCP Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="sushant747">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="bash-scripting.html" />
+    
+    
+    <link rel="prev" href="linux.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.gitbook.com/book/sushant747/total-oscp-guide" target="_blank" class="custom-link">Total OSCP Guide</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="the_basics.html">
+            
+                <a href="the_basics.html">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1.1" data-path="basics_of_linux.html">
+            
+                <a href="basics_of_linux.html">
+            
+                    
+                    Basics of Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="bash-scripting.html">
+            
+                <a href="bash-scripting.html">
+            
+                    
+                    Bash-scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="vim.html">
+            
+                <a href="vim.html">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="windows.html">
+            
+                <a href="windows.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="basics_of_windows.html">
+            
+                <a href="basics_of_windows.html">
+            
+                    
+                    Basics of Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="powershell.html">
+            
+                <a href="powershell.html">
+            
+                    
+                    PowerShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="powershell_scripting2.html">
+            
+                <a href="powershell_scripting2.html">
+            
+                    
+                    PowerShell Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="cmd.html">
+            
+                <a href="cmd.html">
+            
+                    
+                    CMD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="scripting_with_python.html">
+            
+                <a href="scripting_with_python.html">
+            
+                    
+                    Scripting With Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="python_fundamentals.html">
+            
+                <a href="python_fundamentals.html">
+            
+                    
+                    Python Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="connections.html">
+            
+                <a href="connections.html">
+            
+                    
+                    Useful Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="transfering_files2.html">
+            
+                <a href="transfering_files2.html">
+            
+                    
+                    Transferring Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="transfering_files.html">
+            
+                <a href="transfering_files.html">
+            
+                    
+                    Transfering Files on Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="transfering_files_to_windows.html">
+            
+                <a href="transfering_files_to_windows.html">
+            
+                    
+                    Transfering files on Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="firewalls.html">
+            
+                <a href="firewalls.html">
+            
+                    
+                    Firewalls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="general_tips.html">
+            
+                <a href="general_tips.html">
+            
+                    
+                    General tips and tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="scanning.html">
+            
+                <a href="scanning.html">
+            
+                    
+                    Recon and Information Gathering Phase
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="passive_information_gatherig.html">
+            
+                <a href="passive_information_gatherig.html">
+            
+                    
+                    Passive Information Gatherig
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" >
+            
+                <span>
+            
+                    
+                    Identify IP-addresses and Subdomains
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" >
+            
+                <span>
+            
+                    
+                    Identify IP-addresses
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="find_subdomains.html">
+            
+                <a href="find_subdomains.html">
+            
+                    
+                    Find Subdomains
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.2.1" data-path="dns_basics.html">
+            
+                <a href="dns_basics.html">
+            
+                    
+                    DNS Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2.2" data-path="finding_subdomains.html">
+            
+                <a href="finding_subdomains.html">
+            
+                    
+                    Finding subdomains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2.3" data-path="dns_zone_transfer_attack.html">
+            
+                <a href="dns_zone_transfer_attack.html">
+            
+                    
+                    DNS Zone Transfer Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="email_harvesting.html">
+            
+                <a href="email_harvesting.html">
+            
+                    
+                    Identifying People
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="google_hacking.html">
+            
+                <a href="google_hacking.html">
+            
+                    
+                    Search Engine Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="identifying-technology-stack.html">
+            
+                <a href="identifying-technology-stack.html">
+            
+                    
+                    Identifying Technology Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="active_information_gathering.html">
+            
+                <a href="active_information_gathering.html">
+            
+                    
+                    Active Information Gathering
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="port_scanning.html">
+            
+                <a href="port_scanning.html">
+            
+                    
+                    Port Scanning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="vulnerability_analysi1s.html">
+            
+                <a href="vulnerability_analysi1s.html">
+            
+                    
+                    Vulnerability analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="server-side-vulnerabilities.html">
+            
+                <a href="server-side-vulnerabilities.html">
+            
+                    
+                    Server-side Vulnerabilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="list_of_common_ports.html">
+            
+                <a href="list_of_common_ports.html">
+            
+                    
+                    Common ports\/services and how to use them
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="port_knocking.html">
+            
+                <a href="port_knocking.html">
+            
+                    
+                    Port Knocking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="web-services.html">
+            
+                <a href="web-services.html">
+            
+                    
+                    HTTP - Web Vulnerabilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="common_web-services.html">
+            
+                <a href="common_web-services.html">
+            
+                    
+                    Common Web-services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="waf_-_web_application_firewall.html">
+            
+                <a href="waf_-_web_application_firewall.html">
+            
+                    
+                    WAF - Web Application Firewall
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="lead_to_compromise.html">
+            
+                <a href="lead_to_compromise.html">
+            
+                    
+                    Attacking the System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="local_file_inclusion.html">
+            
+                <a href="local_file_inclusion.html">
+            
+                    
+                    Local File Inclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="remote_file_inclusion.html">
+            
+                <a href="remote_file_inclusion.html">
+            
+                    
+                    Remote File Inclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="web-scanning.html">
+            
+                <a href="web-scanning.html">
+            
+                    
+                    Hidden Files and Directories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.4" data-path="sql-injections.html">
+            
+                <a href="sql-injections.html">
+            
+                    
+                    SQL-Injections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.5" data-path="nosql-injections.html">
+            
+                <a href="nosql-injections.html">
+            
+                    
+                    Nosql-Injections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.6" data-path="xml_external_entity_attack.html">
+            
+                <a href="xml_external_entity_attack.html">
+            
+                    
+                    XML External Entity Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.7" data-path="bypass_image_upload.html">
+            
+                <a href="bypass_image_upload.html">
+            
+                    
+                    Bypass File Upload Filtering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.8" data-path="exposed_version_control.html">
+            
+                <a href="exposed_version_control.html">
+            
+                    
+                    Exposed Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.9" data-path="failure-to-restrict-url-access.html">
+            
+                <a href="failure-to-restrict-url-access.html">
+            
+                    
+                    Failure to Restrict URL Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="attacking_the_user.html">
+            
+                <a href="attacking_the_user.html">
+            
+                    
+                    Attacking the User
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.1" data-path="clickjacking.html">
+            
+                <a href="clickjacking.html">
+            
+                    
+                    Clickjacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.2" data-path="broken_authentication_or_session_management.html">
+            
+                <a href="broken_authentication_or_session_management.html">
+            
+                    
+                    Broken Authentication or Session Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.3" data-path="text-injection.html">
+            
+                <a href="text-injection.html">
+            
+                    
+                    Text\/content-injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.4" data-path="subdomain_takeover.html">
+            
+                <a href="subdomain_takeover.html">
+            
+                    
+                    Subdomain Takeover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.5" data-path="cross_site_request_forgery.html">
+            
+                <a href="cross_site_request_forgery.html">
+            
+                    
+                    Cross Site Request Forgery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.6" data-path="cross-site-scripting.html">
+            
+                <a href="cross-site-scripting.html">
+            
+                    
+                    Cross-site-scripting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.4.6.1" data-path="examplesXSS.html">
+            
+                <a href="examplesXSS.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.7" data-path="browser_vulnerabilities.html">
+            
+                <a href="browser_vulnerabilities.html">
+            
+                    
+                    Browser Vulnerabilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4.8" data-path="java_applet.html">
+            
+                <a href="java_applet.html">
+            
+                    
+                    Java Applet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="automated_vulnerability_scanners.html">
+            
+                <a href="automated_vulnerability_scanners.html">
+            
+                    
+                    Automated Vulnerability Scanners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="exploiting.html">
+            
+                <a href="exploiting.html">
+            
+                    
+                    Exploiting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="social_engineering_-_phishing.html">
+            
+                <a href="social_engineering_-_phishing.html">
+            
+                    
+                    Social Engineering - Phishing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="default_layout_apache_on_different_versiont.html">
+            
+                <a href="default_layout_apache_on_different_versiont.html">
+            
+                    
+                    Default Layout of Apache on Different Versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="reverse-shell.html">
+            
+                <a href="reverse-shell.html">
+            
+                    
+                    Shells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="webshell.html">
+            
+                <a href="webshell.html">
+            
+                    
+                    Webshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="create_shellcode.html">
+            
+                <a href="create_shellcode.html">
+            
+                    
+                    Generate Shellcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="editing-exploits.html">
+            
+                <a href="editing-exploits.html">
+            
+                    
+                    Editing Exploits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="compiling-windows-exploits.html">
+            
+                <a href="compiling-windows-exploits.html">
+            
+                    
+                    Compiling windows exploits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="post_exploitation.html">
+            
+                <a href="post_exploitation.html">
+            
+                    
+                    Post Exploitation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="spawning_shells.html">
+            
+                <a href="spawning_shells.html">
+            
+                    
+                    Spawning Shells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="getting_meterpreter_shell.html">
+            
+                <a href="getting_meterpreter_shell.html">
+            
+                    
+                    Meterpreter for Post-Exploitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="privilege_escalation_-_linux.html">
+            
+                <a href="privilege_escalation_-_linux.html">
+            
+                    
+                    Privilege Escalation - Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="privilege_escalation_windows.html">
+            
+                <a href="privilege_escalation_windows.html">
+            
+                    
+                    Privilege Escalation - Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="escaping_restricted_shell.html">
+            
+                <a href="escaping_restricted_shell.html">
+            
+                    
+                    Escaping Restricted Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="bypassing_antivirus.html">
+            
+                <a href="bypassing_antivirus.html">
+            
+                    
+                    Bypassing antivirus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="loot.html">
+            
+                <a href="loot.html">
+            
+                    
+                    Loot and Enumerate
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.7.1" data-path="loot_windows_-_for_credentials_and_other_stuff.html">
+            
+                <a href="loot_windows_-_for_credentials_and_other_stuff.html">
+            
+                    
+                    Loot Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.2" data-path="tcp-dumps_on_pwnd_machines.html">
+            
+                <a href="tcp-dumps_on_pwnd_machines.html">
+            
+                    
+                    Loot Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="persistence.html">
+            
+                <a href="persistence.html">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="clean_up.html">
+            
+                <a href="clean_up.html">
+            
+                    
+                    Cover your tracks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="password-cracking.html">
+            
+                <a href="password-cracking.html">
+            
+                    
+                    Password Cracking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="generate_custom_wordlist.html">
+            
+                <a href="generate_custom_wordlist.html">
+            
+                    
+                    Generate Custom Wordlist
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="identify_hash_and_crack_it.html">
+            
+                <a href="identify_hash_and_crack_it.html">
+            
+                    
+                    Offline Password Cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="online_password_cracking.html">
+            
+                <a href="online_password_cracking.html">
+            
+                    
+                    Online Password Cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="pass_the_hash_-_reusing_hashes.html">
+            
+                <a href="pass_the_hash_-_reusing_hashes.html">
+            
+                    
+                    Pass the Hash - Reusing Hashes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="port_forwarding_and_tunneling.html">
+            
+                <a href="port_forwarding_and_tunneling.html">
+            
+                    
+                    Pivoting - Port forwarding - Tunneling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="network_traffic.html">
+            
+                <a href="network_traffic.html">
+            
+                    
+                    Network traffic analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="arp-spoofing.html">
+            
+                <a href="arp-spoofing.html">
+            
+                    
+                    Arp-spoofing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="ssl-strip.html">
+            
+                <a href="ssl-strip.html">
+            
+                    
+                    SSL-strip
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="dns-spoofing.html">
+            
+                <a href="dns-spoofing.html">
+            
+                    
+                    DNS-spoofing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="wireshark.html">
+            
+                <a href="wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="wifi.html">
+            
+                <a href="wifi.html">
+            
+                    
+                    Wifi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="wep.html">
+            
+                <a href="wep.html">
+            
+                    
+                    WEP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="wps.html">
+            
+                <a href="wps.html">
+            
+                    
+                    WPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="physical_access_to_machine.html">
+            
+                <a href="physical_access_to_machine.html">
+            
+                    
+                    Physical access to machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="littearature.html">
+            
+                <a href="littearature.html">
+            
+                    
+                    Literature
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Basics of Linux</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="basics-of-linux">Le Basi di Linux</h1>
+<p> Questo è un capitolo enorme. Lo divideremo in molti sottotitoli ma sara' il tuttoin un unico posto in modo da cercare facilmente quello che stai cercando.</p>
+<h2 id="1-the-shell---bash">1. LA Shell - Bash</h2>
+<p>La shell o il terminale è uno strumento davvero utile. Bash è la shell standard sulla maggior parte delle distribuzioni Linux.</p>
+<h3 id="navigating">Vavigazione</h3>
+<p><code>pwd</code> - Stampa la directory corrente</p>
+<p><code>cd</code> - Cambia directory</p>
+<p><code>cd ~</code> - Tornare alla home directory</p>
+<p><code>cd -</code> - Tornare alla directory precedente</p>
+<h3 id="looking-at-files">Guardare/leggere file</h3>
+<p><code>ls</code> - Elenca i file nella directory</p>
+<p><code>ls -ltr</code> - Ordina l'elenco per ultima modifica. -time -reverse</p>
+<p><code>file</code> - Mostra le informazioni sul file. Che tipo di file è. Ad esempio, se si tratta di un file binario o di testo</p>
+<p><code>cat</code> - Restituisce il contenuto del file.</p>
+<p><code>less</code> - Restituisce File di output ma solo visualizzandolo una pagina per volta, permettendo di scorre in avanti e all'indietro e di effettuare ricerche.
+<p>Use <code>/searchterm</code> per cercare. È lo stesso comando di  im, <code>n</code> per scorrere fino al risultato di ricerca successivo. Premere <code>q</code> per uscire.
+<h3 id="working-with-files">Lavorare con i file</h3>
+<p><code>touch</code> - Crea un nuovo file.</p>
+<p><code>cp</code> - Copia un file.</p>
+<p><code>mkdir</code> - Crea una directory</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Crea l'intera struttura di directory</span>
+mkdir -p new/thisonetoo/and/this/one
+</code></pre>
+<p><code>rm</code> - Rimuove il file</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#Rimuovi in modo ricorsivo e il suo contenuto. Comando molto pericoloso!</span>
+rm -rf ./directory
+</code></pre>
+<p>Watch the command destroy an entire machine: <a href="https://www.youtube.com/watch?v=D4fzInlyYQo" target="_blank">https://www.youtube.com/watch?v=D4fzInlyYQo</a></p>
+<p><code>rmdir</code> - Rimuove una  directory vuota</p>
+<h3 id="a-little-bit-of-everything">Un po 'di tutto</h3>
+<p><code>history</code> - Mostra la cronologia dei comandi</p>
+<p><code>sudo</code></p>
+<p>Elenca quali diritti ha l'utente sudo..</p>
+<pre><code>sudo -l
+</code></pre><pIl file di configurazione del Sudo è di solito <strong>/etc/sudoers</strong></p>
+<h3 id="finding-files">Trovare file</h3>
+<p>Esistono principalmente tre modi per trovare file su Linux: <strong>find</strong>, <strong>locate</strong>, and <strong>which</strong>.</p>
+<h4 id="find">Find</h4>
+<p>Find è più lento di locate ma molto più approfondito. Puoi cercare i file in modo ricorsivo e usare regex e molte altre funzionalità.</p>
+<pre><code># Questo invierà tutte le autorizzazioni negate agli output su dev / null.
+find / -name file 2&gt;/dev/null
+</code></pre><h4 id="locate">Locate</h4>
+<p>Locate è molto veloce perché si basa su un database interno. Quindi, per averlo aggiornato è necessario eseguire: </p>
+<pre><code>sudo updatedb
+</code></pre><p>Quindi puoi facilmente trovare cose come questa:</p>
+<pre><code>locate filename
+</code></pre><h4 id="which">Which</h4>
+<p>Emette il percorso del binario che stai cercando. Cerca tra le directory definite nella variabile $PATH. </p>
+<pre><code class="lang-bash"><span class="hljs-built_in">which</span> bash
+<span class="hljs-comment"># Outputs: /bin/bash</span>
+</code></pre>
+<h2 id="2-editing-text">2. Modifica del testo</h2>
+<p>First let&apos;s just clear out something about <strong>standard streams</strong>, or <strong>I/O</strong>-streams. Standard streams are the streams that are used to interact between the human computer-user and the machine. There are three standard streams: standard input (stdin), standard output (stdout), and standard error (stderr).The stdin stream can be seen as an abstractions of the real keyboard input. So when you issue a command/program that requires input the program does not read straight from the keyboard input, instead it reads from the file STDIN.</p>
+<h3 id="stdin">Stdin</h3>
+<p>Stdin is the data that gets inputed into the program. An example of a program that requires stdin data is <code>cp</code>. In order for the program to do anything it needs input data. For example <code>cp file1 copy_of_file1</code>. Here <code>file1</code> and <code>copy_of_file1</code> is the stdin.</p>
+<p>So the default Stdin comes from the STDIN-file that is a text-file representation of the keyboard input. But often times we do not want to input stuff from the keyboard, sometimes we want to input something into a program that comes from another file. That is when we can use redirection symbol: <code>&gt;</code>. </p>
+<p>So an example could be <code>cat &lt; my_text_file.txt</code>. The data from my_text_file.txt will now be used as input instead of the keyboard input. </p>
+<p>The file descriptor for <strong>stdin</strong> is: <strong>0</strong></p>
+<h3 id="stdout">Stdout</h3>
+<p>Stdout is the data that get ouputed from the program.
+For example, when you use the command <code>cat file1</code> that data/text that gets outputed is the stdout The same with the program <code>ls</code>. Not all programs have stdout. For example when you use <code>mv</code> or <code>cp</code> successfully you get no stdout back from the program.</p>
+<p>The stdout can be redirected to another file by using these symbols <code>&gt;</code> and <code>&gt;&gt;</code>. So now we can do the following:</p>
+<pre><code>ls &gt; result_of_ls.txt
+# now the result will be written to the file result_of_ls.txt
+ls &gt;&gt; result_of_ls.txt
+# This will append the data to the bottom of the file result_of_ls.txt
+</code></pre><p>Another incredibly useful feature is the <strong>pipe</strong> feature, reprsented with this symbol <code>|</code>. It will take the stdout and redirect it into another program. Here is an example:</p>
+<pre><code class="lang-bash">ls -la | less
+</code></pre>
+<p>This will take the stdout from <code>ls -la</code> and forward/redirect it into the <code>less</code> program. Using the <strong>pipe</strong> you can now chain different commands. </p>
+<p>The file descriptor for <strong>stdout</strong> is: <strong>1</strong></p>
+<h3 id="stderr">Stderr</h3>
+<p>Stderr is the stream used for outputting error messages. So if a program fails for whatever reason. For example, if we try to copy a file that does not exist, this will be the stdrr output:</p>
+<pre><code>cp thisfiledoesnotexist aaaaaaaaaa
+cp: cannot stat &apos;thisfiledoesnotexist&apos;: No such file or directory
+</code></pre><p>This is a common way for stderr to present itself, just straight out into the terminal. But sometimes stderr gets sent to a log file.</p>
+<p>Stderr is useful because with it we can separate between <strong>stdout</strong> and <strong>stderr</strong>. However, to the eye it might be difficult to distinguish what output is <strong>stdout</strong> and what output is <strong>stderr</strong>.</p>
+<p>One easy way to determine is the output is <strong>stderr</strong> or <strong>stdout</strong> is to simply redirect it into a file. Because by default you only redirect <strong>stdout</strong>, and not <strong>stderr</strong>.</p>
+<pre><code class="lang-bash">cp thisfiledoesnotexist aaaaaaaaaa &gt; result.txt
+cp: cannot <span class="hljs-built_in">stat</span> <span class="hljs-string">&apos;thisfiledoesnotexist&apos;</span>: No such file or directory
+<span class="hljs-comment"># If we now look at result.txt we will find that it is empty. Since the error-text we recieved could not be redirected into the textfile, since it is stderr and not stdout.</span>
+</code></pre>
+<h3 id="filters">Filters</h3>
+<p>There are certain programs that are especially useful to use together with pipes. They can also be used as stand-alone programs but you will often see them together with pipes.</p>
+<p><code>sort</code></p>
+<pre><code>sort test.txt
+</code></pre><p><code>uniq</code></p>
+<pre><code>sort -u test.txt
+sort test.txt | uniq
+cat filename | sort -u &gt; newFileName
+</code></pre><p><code>grep</code></p>
+<p><code>head</code></p>
+<p><code>tail</code></p>
+<p><code>tr</code></p>
+<p><code>sed</code></p>
+<h3 id="editing-text">Editing text</h3>
+<h4 id="sed">sed</h4>
+<p>Can perform basic editing on streams, that is to say, text.</p>
+<p>Remove first line of file/stream</p>
+<pre><code>sed &quot;1d&quot;
+</code></pre><h4 id="cut">cut</h4>
+<p>Cut by column</p>
+<p>This is a useful command to cut in text.</p>
+<p>Let&apos;s say that we have the following text, and we want to cut out the ip-address.</p>
+<pre><code>64 bytes from 192.168.0.1: icmp_req=1 ttl=255 time=4.86 ms
+</code></pre><pre><code>cut -d&quot; &quot; -f4
+</code></pre><p><code>-d</code> stands for delimiter. and <code>-f</code> for field.</p>
+<h4 id="tr---translate">tr - Translate</h4>
+<p>Transform all letter into capital letters</p>
+<pre><code>tr &quot;[:lower:]&quot; &quot;[:upper:]&quot; &lt; file1 &gt; file2
+</code></pre><p>Example<br>Remove character</p>
+<pre><code># Remove characters
+cat file.txt | tr -d &quot;.&quot;
+
+# Remove and replace
+# Remove all dots and replace them with underscore.
+cat file.txt | tr &quot;.&quot; &quot;_&quot;
+</code></pre><p><a href="http://www.thegeekstuff.com/2012/12/linux-tr-command/" target="_blank">http://www.thegeekstuff.com/2012/12/linux-tr-command/</a></p>
+<h4 id="awk">awk</h4>
+<p>So awk is an advanced tool for editing text-files. It is its own programming language to it can become quite complex. Awk iterates over the whole file line by line.</p>
+<p>This is the basic structure of an awk command</p>
+<pre><code>awk &apos;/search_pattern/ { action_to_take_on_matches; another_action; }&apos; file_to_parse
+</code></pre><p>The search pattern takes regex.<br>You can exclude the search portion or the action portion.</p>
+<p>This just prints every line of the file.</p>
+<pre><code>awk &apos;{print}&apos; filename
+</code></pre><p>Filtering out specific ip-address:</p>
+<pre><code>awk &apos;/172.16.40.10.81/&apos; error.log
+</code></pre><p>Now we want to print out the fourth column of that file, we can just pipe this to cut, but we can also use awk for it, like this:</p>
+<pre><code>awk &apos;/172.16.40.10.81/ {print $4}&apos; error.log
+# Another example
+awk &apos;{print $2,$5;}&apos; error.txt
+This prints columns 2 and 5.
+</code></pre><p>We can use the -F flag to add a custom delimiter.</p>
+<pre><code>awk -F &apos;:&apos; &apos;{print $1}&apos; test.txt
+</code></pre><p>So if you are manipulating some text you might want to start the output with some info about the columns or something like that. To do that we can use the BEGIN-keyword.</p>
+<pre><code>awk &apos;BEGIN {printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3}&apos; test.txt | head
+awk &apos;BEGIN{printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3} END {printf &quot;End of the file\n&quot;}&apos; test.txt | tail
+</code></pre><p>Here we are printing IP-address    PORT to the first line of the file.</p>
+<h2 id="3-user-management">3. User management</h2>
+<p>To add a user we do:</p>
+<pre><code>adduser NameOfUser
+
+# On some machines it is
+useradd nameOfUser
+</code></pre><p>To add user to sudo-group:</p>
+<pre><code>adduser NameOfUser sudo
+</code></pre><p>On some machines we might not be able to edit the sudoers file because we don&apos;t have an interactive shell, in this case can you can just redirect the text into the file, like this:</p>
+<pre><code>echo &quot;username ALL=(ALL) ALL&quot; &gt;&gt; /etc/sudoers
+</code></pre><p>Check which users are in the sudo group:</p>
+<pre><code>cat /etc/group | grep sudo
+</code></pre><p>Switch user in terminal:</p>
+<pre><code>su NameOfUser
+</code></pre><p>Remove/delete user:</p>
+<pre><code>sudo userdel NameOfUser
+</code></pre><h2 id="4-permissions">4. Permissions</h2>
+<pre><code>ls -la
+</code></pre><p>Shows all the files and directories and their permission settings.</p>
+<pre><code>drwxrwxrwt 2 root root 4,0K ago  3 17:33 myfile
+</code></pre><p>Here we have 10 letters in the beginning. The first one <code>d</code> shows that it is a directory.<br>The next three letters are for read, <code>w</code> for write and <code>x</code> for execute. The first three belong to the owner, the second three to the group, and the last three to all users.</p>
+<p><a href="https://linuxjourney.com/lesson/file-permissions" target="_blank">https://linuxjourney.com/lesson/file-permissions</a></p>
+<h2 id="5-processes">5. Processes</h2>
+<p>To display information regarding the systems processes you can use the <code>ps</code> command. </p>
+<pre><code>ps -aux
+</code></pre><p><code>-a</code> stands for all
+<code>-u</code> stands for all processes by all users
+<code>-x</code> stands for all processes that don&apos;t run a <code>tty</code> </p>
+<p>If you run this command you will probably see a pretty big output. In the column for <strong>command</strong> you will see what command has been run. Every process has a Process Identification Number (<strong>PID</strong>). Something you will also see in the output.</p>
+<p>All of theses processes can actually be found in <code>/proc</code>. You just go to <code>/proc/[pid]</code>. In <code>/proc</code> you can find information about the system, and you can actually change the system if you change those files! But more on that later. What I wanted to explain is that if we look at the output from <code>ps</code> we see that some commands are in brackets. Like this:</p>
+<pre><code>root        10  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/1]
+root        12  0.0  0.0      0     0 ?        S    ene14   0:00 [migration/1]
+root        13  0.0  0.0      0     0 ?        S    ene14   0:00 [ksoftirqd/1]
+</code></pre><p>Those are usually kernel processes, and you can safely assume that no user has started them. </p>
+<p>If you want to monitor processes in real time you can use <code>top</code> or <code>htop</code>. <code>top</code> comes preinstalled on most distros. But <code>htop</code> is really a lot nicer.</p>
+<p>For <code>htop</code> the F1-10 keys might trigger OS-events. So you can use the shortcuts instead.</p>
+<pre><code>Shortcut Key    Function Key    Description
+h                    F1           Invoke htop Help
+S                    F2           Htop Setup Menu
+/                    F3           Search for a Process
+I                    F4           Invert Sort Order
+t                    F5           Tree View
+&gt;                    F6           Sort by a column
+[                    F7           Nice &#x2013; (change priority)
+]                    F8           Nice + (change priority)
+k                    F9           Kill a Process
+q                    F10         Quit htop
+</code></pre><p><a href="http://www.thegeekstuff.com/2011/09/linux-htop-examples/" target="_blank">http://www.thegeekstuff.com/2011/09/linux-htop-examples/</a></p>
+<h2 id="6-packages">6. Packages</h2>
+<p>Something that difference Linux from windows is how it handles installing new software. In windows you usually have to google around and then click on random scary download buttons that might fuck up your computer, or not. It&apos;s like a constant lottery where you win by no installing malware. In Linux that is usually not really an issue. That is because distros have their own software repositories from where you can download your software. This is kind of like an app-store except everything is free.</p>
+<p>The different major branches of teh GNU/Linux OS have their own software repositories. Ubuntu has their own, debian has their own, and so on. </p>
+<p>Different distros also have their own package-amangers. For example, Debian and ubuntu uses <code>apt</code>, while Redhat uses <code>rpm</code>, and Arch uses <code>pacman</code>. You should strick to your own package-manager, because even though chaning package-manager is possible it will probably just cause you more headache than benefits.</p>
+<h3 id="install-package">Install package</h3>
+<p>Example of how to install something with apt:</p>
+<pre><code>sudo apt-get install nmap
+</code></pre><p>If you only have a .deb file you do this to install from the terminal:</p>
+<pre><code>sudo dpkg -i /path/to/deb/file
+</code></pre><pre><code>sudo apt-get install -f
+</code></pre><h3 id="remove-packages">Remove packages</h3>
+<p>This can be tricky. First find the package</p>
+<pre><code>dpkg --list
+</code></pre><p>Then you find it in your list.</p>
+<pre><code>sudo apt-get --purge remove nameOfProgram
+</code></pre><p>When you remove some package it might have requires some other dependencies. To remove those you run</p>
+<pre><code>sudo apt-get autoremove
+</code></pre><h3 id="organizing-your-path-variable">Organizing your $path variable</h3>
+<p>I am talking about debian/ubuntu here. On other systems I don&apos;t know.</p>
+<p>You can define your path in <code>/etc/environment</code>. If you don&apos;t have it you can create it and add the path like this:</p>
+<pre><code>source /etc/environment &amp;&amp; export PATH
+</code></pre><p>If you are using zsh (which you should) you have to add it here</p>
+<pre><code>sudo vim /etc/zsh/zshenv
+</code></pre><p>And add this line somewhere:</p>
+<pre><code>source /etc/environment
+</code></pre><h3 id="adding-a-path">Adding a path</h3>
+<p>This is a non-persistent way to add binaries to your path. Might be useful if you have entered a system that has limited binaries in the path.</p>
+<pre><code>export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre><h3 id="installing-custom-packages">Installing custom packages</h3>
+<p>If you download a package that is not in the official repository you can put the binary in <code>/opt</code>. That is good place to put your binaries.</p>
+<p>Now you need to add that path to your path-variable. Remember how we set that in <code>/etc/environment</code>. So now open up that file and add <code>/opt</code> to it, so i looks like this.</p>
+<pre><code>PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt&quot;
+</code></pre><p>I always add custom binaries last. That means that if we have two binaries with the same name the machine will first select the original binary. This way you won&apos;t have to fear screwing up, by accidentally creating a new <code>ls</code> binary for example.</p>
+<h2 id="7-cronjobs">7. Cronjobs</h2>
+<p>There are two ways to configure cronjobs. The first one is by putting scripts in the following folders.</p>
+<pre><code>/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.weekly
+/etc/cron.monthly
+</code></pre><p>The second way is to write the command in the crontab</p>
+<pre><code># list cronjobs
+crontab -l
+
+# Edit or create new cronjobs
+crontab -e
+</code></pre><h2 id="8-devices">8. Devices</h2>
+<p>List all devices</p>
+<pre><code>fdisk -l
+</code></pre><h2 id="9-the-filesystem">9. The Filesystem</h2>
+<h3 id="the-filesystem-hierarchy-standard">The Filesystem Hierarchy Standard</h3>
+<p><img src="fss.jpg" alt=""><br>This image is copied from here: <a href="http://askubuntu.com/questions/138547/how-to-understand-the-ubuntu-file-system-layout/138551#138551" target="_blank">http://askubuntu.com/questions/138547/how-to-understand-the-ubuntu-file-system-layout/138551#138551</a></p>
+<h4 id="difference-between-sbin-and-bin">Difference between sbin and bin</h4>
+<p>sbin is system binaries. A normal user do not have access to these binaries. It is only root and users with sudo privileges that do.</p>
+<pre><code>pelle@mymachine:/bin$ ls -la /bin
+total 4092
+drwxr-xr-x  2 root root   4096 2012-02-04 19:12 .
+drwxr-xr-x 21 root root   4096 2012-02-06 18:41 ..
+
+--snip--
+
+-rwxr-xr-x  1 root root  27312 2008-04-04 02:42 cat
+-rwxr-xr-x  1 root root  45824 2008-04-04 02:42 chgrp
+-rwxr-xr-x  1 root root  42816 2008-04-04 02:42 chmod
+-rwxr-xr-x  1 root root  47868 2008-04-04 02:42 chown
+-rwxr-xr-x  1 root root  71664 2008-04-04 02:42 cp
+-rwxr-xr-x  1 root root 110540 2007-11-13 05:54 cpio
+-rwxr-xr-x  1 root root  79988 2009-03-09 09:03 dash
+-rwxr-xr-x  1 root root  24684 2008-04-04 02:42 echo
+-rwxr-xr-x  1 root root  40560 2008-02-29 02:19 ed
+-rwxr-xr-x  1 root root  96440 2007-10-23 16:58 egrep
+-rwxr-xr-x  1 root root  22192 2008-04-04 02:42 false
+-rwxr-xr-x  1 root root   5740 2008-02-06 17:49 fgconsole
+-rwxr-xr-x  1 root root  53396 2007-10-23 16:58 fgrep
+-rwxr-xr-x  1 root root   8796 2007-11-15 13:01 hostname
+</code></pre><p>We have echo, cp, grep. The normal stuff a user needs.</p>
+<p>In sbin we have binaries that control the system.</p>
+<pre><code>ls -la /sbin
+total 5884
+drwxr-xr-x  2 root root     4096 2012-02-04 10:01 .
+drwxr-xr-x 21 root root     4096 2012-02-06 18:41 ..
+-rwxr-xr-x  3 root root    23840 2008-03-27 13:25 findfs
+-rwxr-xr-x  1 root root    20020 2008-03-27 13:25 fsck
+-rwxr-xr-x  1 root root    15168 2008-09-26 08:43 getty
+-rwxr-xr-x  1 root root      375 2009-12-10 10:55 grub-install
+lrwxrwxrwx  1 root root        6 2012-02-04 09:51 halt -&gt; reboot
+-rwxr-xr-x  1 root root    69228 2008-03-28 18:26 hdparm
+-rwxr-xr-x  1 root root    31620 2008-09-26 08:43 hwclock
+-rwxr-xr-x  1 root root    61808 2007-12-13 05:51 ifconfig
+-rwxr-xr-x  2 root root    27372 2007-09-19 20:25 ifdown
+-rwxr-xr-x  2 root root    27372 2007-09-19 20:25 ifup
+-rwxr-xr-x  1 root root    89604 2008-04-11 09:50 init
+-rwxr-xr-x  1 root root    47448 2008-01-28 08:49 ip6tables
+-rwxr-xr-x  1 root root    51680 2008-01-28 08:49 ip6tables-restore
+-rwxr-xr-x  1 root root    51644 2008-01-28 08:49 ip6tables-save
+-rwxr-xr-x  1 root root    10948 2007-12-13 05:51 ipmaddr
+-rwxr-xr-x  1 root root    47480 2008-01-28 08:49 iptables
+</code></pre><h3 id="mount">Mount</h3>
+<p>So everything on the linux-filesystem belongs to some part of the filesystem-tree. So if we plug in some device we need to mount it to the filesystem. That pretty much means that we need to connect it to the filesystem. Mount is like another word for connect.</p>
+<p>So if you want to connect a CD-rom or USB to your machine. You need to mount it to a specific path on the filesystem.</p>
+<p>So if you plug in the usb it might be accessible at <strong>/dev/usb</strong>. But that it not enough for you to be able to browse the usb content. You need to mount it. You do this by writing</p>
+<pre><code>mount /dev/usb /media/usb
+</code></pre><p>Or whereever you want to mount it.</p>
+<p>So when you click on Eject or Safetly remove you are just unmounting.</p>
+<pre><code>umount /media/usb
+</code></pre><p>Knowing how to mount and unmount might be useful if you want to get access to a remote NFS-directory. You will need to mount it to your filesystem to be able to browse it.</p>
+<h2 id="10-controlling-services">10. Controlling services</h2>
+<h3 id="systemctl">Systemctl</h3>
+<p>Systemctl can be used to enable and disable various services on your linux machine.<br>Start ssh</p>
+<pre><code>systemctl start ssh
+systemctl status ssh
+systemctl stop ssh
+</code></pre><p>You can verify that the service is listening for connection by running network status.</p>
+<pre><code>netstat -apnt
+</code></pre><p>Make ssh start upon boot</p>
+<pre><code>systemctl enable ssh
+systemctl enable apache2
+</code></pre><h3 id="initd">Init.d</h3>
+<p>Init.d is just a wrapper around Systemctl. I prefer it.</p>
+<pre><code>/etc/init.d/cron status
+/etc/init.d/cron start
+/etc/init.d/cron stop
+</code></pre><h3 id="rcconf">rcconf</h3>
+<p>This is a tool to control services more easily, what is running upon boot and so on.</p>
+<h2 id="11-kernel">11. Kernel</h2>
+<p>The Kernel is responsible for talking between the hardware and the software, and to manage the systems resources. </p>
+<p>The Linux Kernel is a monolithic kernel, unlike the OSX and the Windows kernels which are hybrid.</p>
+<p>You can find the kernel file in <code>/boot</code>. It might look like something like this<code>vmlinuz-4.4.0-57-generic</code>. In the beginning of time the kernel was simply called <code>linux</code>. But when Virtual Memory was introduced they changed the name to <code>vmlinux</code> to reflect that the kernel could handle virtual memory. When the kernel later became too big it was compressed using zlib , therefore the name was changed to <code>vmlinuz</code>.</p>
+<p>The Linux Kernel differs from Windows in that it contains drivers by default. So you don&apos;t have to go around looking for drivers like you do on windows when you want to install a printer, or something like that. </p>
+<p>It is really easy to upgrade to the latest Linux kernel, all you have to do tis this:</p>
+<pre><code class="lang-bash">sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
+<span class="hljs-comment"># or</span>
+sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</code></pre>
+<p>If you are using a distro that is Long Term Supported (LTS). You will not get the latest Kernel version, but you will get the latest Long Term Supported version.</p>
+<h2 id="14-logging">14. Logging</h2>
+<p>Logs can be viewed here on debian distros <code>/var/log/</code></p>
+<h2 id="16-network-basics">16. Network basics</h2>
+<h3 id="netstat---find-outgoing-and-incoming-connections">Netstat - Find outgoing and incoming connections</h3>
+<p>Netstat is a multiplatform tool. So it works on both mac, windows and linux.</p>
+<pre><code>$ netstat -antlp
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 mymachine:domain        *:*                     LISTEN      -               
+tcp        0      0 localhost:ipp           *:*                     LISTEN      -               
+tcp        0      0 localhost:27017         *:*                     LISTEN      -               
+tcp        0      0 localhost:mysql         *:*                     LISTEN      -               
+tcp        0      0 192.168.0.15:44013      ec2-54-85-27-14.c:https ESTABLISHED 6604/slack --disabl
+tcp        0      0 192.168.0.15:51448      ec2-50-16-193-3.c:https ESTABLISHED 3120/chrome     
+tcp        0      0 192.168.0.15:43476      104.27.152.203:https    TIME_WAIT   -               
+tcp        0      0 192.168.0.15:59380      149.154.175.50:https    ESTABLISHED 5068/Telegram   
+tcp        0      0 192.168.0.15:53840      149.154.175.50:http     ESTABLISHED 5068/Telegram   
+tcp        0      0 192.168.0.15:47158      176.32.99.76:https      ESTABLISHED 3120/chrome     
+tcp        0      0 192.168.0.15:47161      176.32.99.76:https      ESTABLISHED 3120/chrome     
+tcp        0      0 localhost:27017         localhost:44196         ESTABLISHED -               
+tcp        0      0 192.168.0.15:46910      a104-114-242-25.d:https ESTABLISHED 3120/chrome     
+tcp        0      0 localhost:44196         localhost:27017         ESTABLISHED 6903/node       
+tcp        0      0 192.168.0.15:36280      cb-in-f101.1e100.:https ESTABLISHED 3120/chrome     
+tcp        0      0 192.168.0.15:47160      176.32.99.76:https      ESTABLISHED 3120/chrome     
+tcp        0      1 192.168.0.15:59285      149.154.175.50:https    LAST_ACK    -               
+udp        0      0 *:35733                 *:*                                 -               
+udp        0      0 mymachine:domain        *:*                                 -               
+udp        0      0 *:bootpc                *:*                                 -               
+udp        0      0 *:33158                 *:*                                 -               
+udp        0      0 *:ipp                   *:*                                 -               
+udp        0      0 *:mdns                  *:*                                 3120/chrome     
+udp        0      0 *:mdns                  *:*                                 3120/chrome     
+udp        0      0 *:mdns                  *:*                                 -               
+udp        0      0 192.168.0.15:55065      ce-in-f189.1e100.:https ESTABLISHED 3120/chrome
+</code></pre><p>A few interesting things to observe here is that my machine is using any port over 1024 to connect to the outside. So it is not like just because we communicate with https and connect to port 443 that we use that port on our machine. On our machine it can be any port (over 1024) and usually any port over 10000.</p>
+<p>Find out what services are listening for connection on your machine<br>Flags</p>
+<pre><code>-a # All
+-n # show numeric addresses
+-p # show port
+-t # tcp
+</code></pre><pre><code>netstat -anpt
+</code></pre><p>To easily check out what process is using lots of bandwidth you can use nethogs.</p>
+<pre><code>sudo apt-get install nethogs
+nethogs
+</code></pre><p>Or you can use tcpdump, or iptables.</p>
+<p>Every listening process of course has a PID, but unless you are root you can&apos;t might not see them all.</p>
+<h3 id="firewall---iptables">Firewall - Iptables</h3>
+<p>Iptables is a firewall tool in linux. A firewall is basically a tool that scans incoming and/or outgoing traffic. You can add rules to the iptables to filter for certain traffic.</p>
+<h4 id="types-of-chains">Types of chains</h4>
+<p>So you can filter traffic in three different ways <strong>input</strong>, <strong>forward</strong>, and <strong>output</strong>. These are called three different chains.</p>
+<p><strong>INPUT</strong><br>This is for incoming connections. If someone wants to ssh into your machine. Or a web-server responds to your request.</p>
+<p><strong>FORWARD</strong><br>This chain is used for traffic that is not aimed at your machine. A router for example usually just passes information on. Most connections are just passing through. As you can see this will probably not be used so much on your machine, as a normal desktop or a server doesn&apos;t router that much traffic.</p>
+<p><strong>OUTPUT</strong></p>
+<p>This chain is used for outgoing traffic.</p>
+<h5 id="active-rules">Active rules</h5>
+<p>To view your active rules you do</p>
+<pre><code>iptables -L
+# It will output something like this
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+</code></pre><p>So as we can see the current policy is to accept all traffic in all directions.</p>
+<p>If you for some reason has been tampering with the iptables and maybe fucked up. This is how you return it to the default setting, accepting all connections</p>
+<pre><code>iptables --policy INPUT ACCEPT
+iptables --policy OUTPUT ACCEPT
+iptables --policy FORWARD ACCEPT
+</code></pre><p>If you instead want to forbid all traffic you do</p>
+<pre><code>iptables --policy INPUT DROP
+iptables --policy OUTPUT DROP
+iptables --policy FORWARD DROP
+</code></pre><p>Okay, so let&apos;s block out some connections. To do that we want to add/append a new rule. We want to block all connections from our enemy 192.168.1.30.</p>
+<pre><code># A for append, and S for source. 
+iptables -A INPUT -s 192.168.1.30 -j DROP
+# Block an entire range
+iptables -A INPUT -s 192.168.1.0/24 -j DROP
+</code></pre><p>Now if we want to see our current rules we just do</p>
+<pre><code>iptables -L
+</code></pre><p>And we can now see our new rule.</p>
+<p>To add line-numbers for each rule, so that you can then specify which rule you want to reset or change or something you can output the rluels with line-numbers</p>
+<pre><code>iptables -L -v --line-numbers
+</code></pre><p><strong>Remove/delete a rule</strong><br>To remove a rule you just do</p>
+<pre><code># Remove one specific rule
+iptables -D INPUT 2
+# Remove all rules
+iptables -F
+</code></pre><p><strong>Save your changes</strong><br>Your changes will only be saved and therefore in action until you restart iptables. So they will disappear every time you reboot unless you save the changes. To save the changes on ubuntu you do</p>
+<pre><code>sudo /sbin/iptables-save
+</code></pre><h4 id="measuring-bandwidth-usage">Measuring bandwidth usage</h4>
+<p>There are a few different tools in hour arsenal that we can use to  measure bandwidth usage. We will start with iptables.</p>
+<p>To view the input and output traffic we just list the rules with some verbosity.</p>
+<pre><code>iptables -L -v
+# Stdout
+Chain INPUT (policy ACCEPT 6382 packets, 1900K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 4266 packets, 578K bytes)
+ pkts bytes target     prot opt in     out     source               destination
+</code></pre><p>So clean this up and reset the count we can do the following</p>
+<pre><code># Restar the count
+iptables -Z
+# Remove all the rules, FLUSH them
+iptables -F
+</code></pre><p>So now we just need to add our rules. A simple script for this would be</p>
+<pre><code>#!/bin/bash
+iptables -F
+iptables -I INPUT 1 -p tcp -j ACCEPT
+</code></pre><p>Then check out the traffc with</p>
+<pre><code>iptables -L -v --line-numbers
+</code></pre><h4 id="examples">Examples</h4>
+<p><strong>Block outgoing connections to a specific ip</strong></p>
+<pre><code>iptables -A OUTPUT -d 198.23.253.22 -j DROP
+</code></pre><p><a href="https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules</a></p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="have-you-tried-turning-it-on-and-off">Have you tried turning it on and off?</h4>
+<p>I have had problems with the network-adapter not starting or something like that, on Ubuntu. You can try to restart the network manager if this happens:</p>
+<pre><code class="lang-bash">sudo service network-manager restart
+</code></pre>
+<h4 id="magical-rfkill">Magical rfkill</h4>
+<p>If for some reason the wifi is blocked you can unblock it (or block it) with rfkill.</p>
+<pre><code>$ rfkill list
+0: phy0: Wireless LAN
+    Soft blocked: no
+    Hard blocked: no
+2: hci0: Bluetooth
+    Soft blocked: no
+    Hard blocked: no
+</code></pre><p>To block or unblock the <strong>phy0</strong> from the example above you do:</p>
+<pre><code># Block
+rfkill block 0
+# Unblock
+rfkill unblock 0
+</code></pre><p>If there is a <strong>hard block</strong> it means that there is a physical switch on you machine that you need to switch off.</p>
+<h2 id="17-subnetting">17. Subnetting</h2>
+<h2 id="18-routing">18. Routing</h2>
+<h2 id="21-dns">21. DNS</h2>
+<h2 id="references">References</h2>
+<p><a href="https://linuxjourney.com/" target="_blank">https://linuxjourney.com/</a><br><a href="https://github.com/jlevy/the-art-of-command-line" target="_blank">https://github.com/jlevy/the-art-of-command-line</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux.html" class="navigation navigation-prev " aria-label="Previous page: Linux">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="bash-scripting.html" class="navigation navigation-next " aria-label="Next page: Bash-scripting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basics of Linux","level":"1.2.1.1","depth":3,"next":{"title":"Bash-scripting","level":"1.2.1.2","depth":3,"path":"bash-scripting.md","ref":"bash-scripting.md","articles":[]},"previous":{"title":"Linux","level":"1.2.1","depth":2,"path":"linux.md","ref":"linux.md","articles":[{"title":"Basics of Linux","level":"1.2.1.1","depth":3,"path":"basics_of_linux.md","ref":"basics_of_linux.md","articles":[]},{"title":"Bash-scripting","level":"1.2.1.2","depth":3,"path":"bash-scripting.md","ref":"bash-scripting.md","articles":[]},{"title":"Vim","level":"1.2.1.3","depth":3,"path":"vim.md","ref":"vim.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"sushant747/security","theme":"default","author":"sushant747","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Total OSCP Guide","language":"en","links":{"sidebar":{"Total OSCP Guide":"https://www.gitbook.com/book/sushant747/total-oscp-guide"},"gitbook":true},"gitbook":"*","description":"This book captures knowledge base required for Offensive Security's OSCP Exam"},"file":{"path":"basics_of_linux.md","mtime":"2017-03-26T09:38:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T08:38:17.767Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
