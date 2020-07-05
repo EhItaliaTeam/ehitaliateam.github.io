@@ -1589,10 +1589,36 @@ find / -name file 2&gt;/dev/null
 <h2 id="2-editing-text">2. Modifica del testo</h2>
 <pPrima di tutto, chiariamo qualcosa sugli stream standard o sugli I / O-stream. I flussi standard sono i flussi utilizzati per interagire tra l'utente del computer umano e la macchina. Esistono tre flussi standard: input standard (stdin), output standard (stdout) ed errore standard (stderr). Il flusso stdin può essere visto come un'astrazione dell'input della tastiera reale. Pertanto, quando si emette un comando / programma che richiede input, il programma non legge direttamente dall'input della tastiera, ma legge dal file STDIN.</p>
 <h3 id="stdin">Stdin</h3>
-
-    
-    
-                            
+   <p>Stdin sono i dati che vengono inseriti nel programma. Un esempio di un programma che richiede dati stdin è  <code>cp</code>.Affinché il programma possa fare qualsiasi cosa, ha bisogno di dati di input. Ad esempio <code> cp file1 copy_of_file1 </code>. Qui <code> file1 </code> e <code> copy_of_file1 </code> è lo stdin. </p>
+   <p> Quindi lo Stdin predefinito proviene dal file STDIN che è una rappresentazione di file di testo dell'input da tastiera. Ma spesso non vogliamo inserire elementi dalla tastiera, a volte vogliamo inserire qualcosa in un programma che proviene da un altro file. Questo è quando possiamo usare il simbolo di reindirizzamento: <code> & gt; </code>. </ P> 
+   <p> Quindi un esempio potrebbe essere <code> cat & lt; my_text_file.txt </ code>. I dati da my_text_file.txt verranno ora utilizzati come input anziché come input da tastiera. </ P> 
+   <p> Il descrittore di file per <strong> stdin </strong> è: <strong>0</strong> </p>
+   <h3 id="stdout">Stdout</h3>                     
+       <p> Stdout sono i dati che vengono estrapolati dal programma.Ad esempio, quando si utilizza il comando <code> cat file1 </code>, i dati / testo che vengono emessi sono lo stdout Lo stesso con il programma <code> ls </code>. Non tutti i programmi hanno stdout. Ad esempio, quando si utilizza <code> mv </code> o <code> cp </code> non si ottiene alcun ritorno dal programma. </p>                 
+       <p> Lo stdout può essere reindirizzato a un altro file usando questi simboli <code> & gt; </code> e <code> & gt; & gt; </code>. Quindi ora possiamo fare quanto segue: </p>
+       <pre> <code> ls & gt; result_of_ls.txt
+        # ora il risultato verrà scritto nel file result_of_ls.txt
+        Ls & gt; & gt; result_of_ls.txt
+        # Questo aggiungerà i dati in fondo al file result_of_ls.txt
+        </code></pre> <p> Un'altra caratteristica incredibilmente utile è la <strong> pipe </strong>, rappresentata da questo simbolo <code> | </code>. Prende lo stdout e lo reindirizza in un altro programma. Ecco un esempio: </p>
+        <pre> <code class = "lang-bash"> ls -la | Di meno
+        </ Code> </ pre>                 
+        <p> Questo prenderà lo stdout da <code> ls -la </code> e lo inoltrerà / reindirizzerà nel programma <code> less </code>. Utilizzando la <strong> pipe </strong> ora puoi concatenare diversi comandi. </ P>                
+         <p> Il descrittore di file per <strong> stdout </strong> è: <strong>1</strong> </p>               
+        <h3 id="stderr">Stderr</h3>                
+         <p> Stderr è il flusso utilizzato per inviare messaggi di errore. Quindi se un programma fallisce per qualsiasi motivo. Ad esempio, se proviamo a copiare un file che non esiste, questo sarà l'output stdrr: </p>               
+          <pre> <code> cp thisfiledoesnotexist aaaaaaaaaa
+            cp: impossibile stat & apos; thisfiledoesnotexist & apos ;: Nessun file o directory
+            </code></pre> <p> Questo è un modo comune per stderr di presentarsi, direttamente nel terminale. Ma a volte stderr viene inviato a un file di registro. </p>
+            <p> Stderr è utile perché con esso possiamo separare tra <strong> stdout </strong> e <strong> stderr </strong>. Tuttavia, a prima vista potrebbe essere difficile distinguere quale output è <strong> stdout </strong> e quale output è <strong> stderr </strong>. </p>
+            <p> Un modo semplice per determinare è che l'output è <strong> stderr </strong> o <strong> stdout </strong> è semplicemente reindirizzarlo in un file. Perché per impostazione predefinita reindirizza solo <strong> stdout </strong> e non <strong> stderr </strong>. </p>
+            <pre> <code class = "lang-bash"> cp thisfiledoesnotexist aaaaaaaaaa & gt; result.txt
+            cp: impossibile <span class = "hljs-built_in"> stat </span> <span class = "hljs-string"> & apos; thisfiledoesnotexist & apos; </span>: nessun file o directory
+            <span class = "hljs-comment"> # Se ora esaminiamo result.txt scopriremo che è vuoto. Poiché il testo dell'errore che abbiamo ricevuto non può essere reindirizzato nel file di testo, poiché è stderr e non stdout. </span>
+            </ Code> </ pre>              
+            <h3 id="filters">Filters</h3>            
+                        
+                        
     </div>
     <div class="search-results">
         <div class="has-results">
