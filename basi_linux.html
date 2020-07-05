@@ -1619,78 +1619,77 @@ cat filename | sort -u &gt; newFileName
 <p>Rimuovere la prima riga di  file/stream</p>
 <pre><code>sed &quot;1d&quot;
 </code></pre><h4 id="cut">cut</h4>
-<p>Cut by column</p>
 <p>Questo è un comando utile per tagliare del testo.</p>
-<p>Let&apos;s say that we have the following text, and we want to cut out the ip-address.</p>
+<p>Abbiamo il seguente testo e vogliamo tagliare l'indirizzo IP.</p>
 <pre><code>64 bytes from 192.168.0.1: icmp_req=1 ttl=255 time=4.86 ms
 </code></pre><pre><code>cut -d&quot; &quot; -f4
-</code></pre><p><code>-d</code> stands for delimiter. and <code>-f</code> for field.</p>
-<h4 id="tr---translate">tr - Translate</h4>
-<p>Transform all letter into capital letters</p>
+</code></pre><p><code>-d</code> sta per il delimitatore e <code>-f</code> per il campo</p>
+<h4 id="tr---translate">tr - Tradurre</h4>
+<p>Trasforma tutte le lettere in maiuscolo.</p>
 <pre><code>tr &quot;[:lower:]&quot; &quot;[:upper:]&quot; &lt; file1 &gt; file2
 </code></pre><p>Example<br>Remove character</p> 
-<pre><code># Remove characters
+<pre><code># Rimuove caratteri
 cat file.txt | tr -d &quot;.&quot;
-# Remove and replace
-# Remove all dots and replace them with underscore.
+# rimuove e rimpiazza
+# Rimuovi tutti i punti e sostituiscili con un trattino basso.
 cat file.txt | tr &quot;.&quot; &quot;_&quot;
 </code></pre><p><a href="http://www.thegeekstuff.com/2012/12/linux-tr-command/" target="_blank">http://www.thegeekstuff.com/2012/12/linux-tr-command/</a></p>
 <h4 id="awk">awk</h4>
-<p>So awk is an advanced tool for editing text-files. It is its own programming language to it can become quite complex. Awk iterates over the whole file line by line.</p>
-<p>This is the basic structure of an awk command</p>
+<p>Awk è uno strumento avanzato per la modifica di file di testo.Il suo linguaggio di programmazione può diventare piuttosto complesso. Awk scorre l'intero file riga per riga.</p>
+<p>Questa è la struttura di base di un comando awk.</p>
 <pre><code>awk &apos;/search_pattern/ { action_to_take_on_matches; another_action; }&apos; file_to_parse
 </code></pre><p>The search pattern takes regex.<br>You can exclude the search portion or the action portion.</p>
-<p>This just prints every line of the file.</p>
+<p>Questo stampa solo ogni riga del file.</p>
 <pre><code>awk &apos;{print}&apos; filename
 </code></pre><p>Filtering out specific ip-address:</p>
 <pre><code>awk &apos;/172.16.40.10.81/&apos; error.log
-</code></pre><p>Now we want to print out the fourth column of that file, we can just pipe this to cut, but we can also use awk for it, like this:</p>
+</code></pre><p>Ora stampiamo la quarta colonna di quel file, possiamo semplicemente eseguire il pipe di questo per tagliare, ma possiamo anche usare awk per questo, in questo modo:</p>
 <pre><code>awk &apos;/172.16.40.10.81/ {print $4}&apos; error.log
-# Another example
+# Un altro esempio
 awk &apos;{print $2,$5;}&apos; error.txt
-This prints columns 2 and 5.
-</code></pre><p>We can use the -F flag to add a custom delimiter.</p>
+Questo printa colonna 2 e 5.
+</code></pre><p>Possiamo usare il flag -F per aggiungere un delimitatore personalizzato.</p>
 <pre><code>awk -F &apos;:&apos; &apos;{print $1}&apos; test.txt
-</code></pre><p>So if you are manipulating some text you might want to start the output with some info about the columns or something like that. To do that we can use the BEGIN-keyword.</p>
+</code></pre><p>Quindi, se stai manipolando del testo, potresti voler avviare l'output con alcune informazioni sulle colonne o qualcosa del genere. Per fare ciò possiamo usare la parola chiave BEGIN.</p>
 <pre><code>awk &apos;BEGIN {printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3}&apos; test.txt | head
 awk &apos;BEGIN{printf &quot;IP-address \tPort\n&quot;} /nop/ {print $3} END {printf &quot;End of the file\n&quot;}&apos; test.txt | tail
 </code></pre><p>Here we are printing IP-address    PORT to the first line of the file.</p>
-<h2 id="3-user-management">3. User management</h2>
-<p>To add a user we do:</p>
+<h2 id="3-user-management">3. Gestione utenti</h2>
+<p>Per aggiungere un utente:</p>
 <pre><code>adduser NameOfUser
-# On some machines it is
+# In alcune macchine
 useradd nameOfUser
-</code></pre><p>To add user to sudo-group:</p>
+</code></pre><p>Per aggiungere l'utente al gruppo sudo:</p>
 <pre><code>adduser NameOfUser sudo
-</code></pre><p>On some machines we might not be able to edit the sudoers file because we don&apos;t have an interactive shell, in this case can you can just redirect the text into the file, like this:</p>
+</code></pre><p>Su alcune macchine potremmo non essere in grado di modificare il file sudoers perché non abbiamo una shell interattiva,in questo caso puoi semplicemente reindirizzare il testo nel file, in questo modo:</p>
 <pre><code>echo &quot;username ALL=(ALL) ALL&quot; &gt;&gt; /etc/sudoers
-</code></pre><p>Check which users are in the sudo group:</p>
+</code></pre><p>Controlla quali utenti sono nel gruppo sudo:</p>
 <pre><code>cat /etc/group | grep sudo
-</code></pre><p>Switch user in terminal:</p>
+</code></pre><p>Cambia utente nel terminale:</p>
 <pre><code>su NameOfUser
-</code></pre><p>Remove/delete user:</p>
+</code></pre><p>Rimuovi/elimina user:</p>
 <pre><code>sudo userdel NameOfUser
-</code></pre><h2 id="4-permissions">4. Permissions</h2>
+</code></pre><h2 id="4-permissions">4. Permessi</h2>
 <pre><code>ls -la
-</code></pre><p>Shows all the files and directories and their permission settings.</p>
+</code></pre><p>Mostra tutti i file e le directory e le relative impostazioni di autorizzazione.</p>
 <pre><code>drwxrwxrwt 2 root root 4,0K ago  3 17:33 myfile
-</code></pre><p>Here we have 10 letters in the beginning. The first one <code>d</code> shows that it is a directory.<br>The next three letters are for read, <code>w</code> for write and <code>x</code> for execute. The first three belong to the owner, the second three to the group, and the last three to all users.</p>
+</code></pre><p>Qui abbiamo 10 lettere all'inizio. Il primo <code>d</code> mostra che si tratta di una directory.<br>Le prossime tre lettere sono per la lettura, <code>w</code> per scrivere <code>x</code> ed eseguire. I primi tre appartengono al proprietario, i secondi tre al gruppo e gli ultimi tre a tutti gli utenti.</p>
 <p><a href="https://linuxjourney.com/lesson/file-permissions" target="_blank">https://linuxjourney.com/lesson/file-permissions</a></p>
-<h2 id="5-processes">5. Processes</h2>
-<p>To display information regarding the systems processes you can use the <code>ps</code> command. </p>
+<h2 id="5-processes">5. Processi</h2>
+<p>Per visualizzare informazioni relative ai processi di sistema è possibile utilizzare <code>ps</code> . </p>
 <pre><code>ps -aux
 </code></pre><p><code>-a</code> stands for all
-<code>-u</code> stands for all processes by all users
-<code>-x</code> stands for all processes that don&apos;t run a <code>tty</code> </p>
-<p>If you run this command you will probably see a pretty big output. In the column for <strong>command</strong> you will see what command has been run. Every process has a Process Identification Number (<strong>PID</strong>). Something you will also see in the output.</p>
-<p>All of theses processes can actually be found in <code>/proc</code>. You just go to <code>/proc/[pid]</code>. In <code>/proc</code> you can find information about the system, and you can actually change the system if you change those files! But more on that later. What I wanted to explain is that if we look at the output from <code>ps</code> we see that some commands are in brackets. Like this:</p>
+<code>-u</code> sta per tutti i processi di tutti gli utenti
+<code>-x</code> sta per tutti i processi che non eseguono a <code>tty</code> </p>
+<p>Se esegui questo comando probabilmente vedrai un risultato piuttosto grande. Nella colonna per <strong>command</strong> vedrai quale comando è stato eseguito.Ogni processo ha un numero di identificazione del processo (<strong>PID</strong>). Qualcosa che vedrai anche nell'output.</p>
+<p>Tutti questi processi possono essere effettivamente trovati in <code>/proc</code>.Usare <code>/proc/[pid]</code>. Su <code>/proc</code> puoi trovare informazioni sul sistema e puoi effettivamente cambiare il sistema se cambi quei file! But more on that later. Quello che volevo spiegare è che se guardiamo l'output da <code>ps</code> vediamo che alcuni comandi sono tra parentesi. Come questo:</p>
 <pre><code>root        10  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/0]
 root        11  0.0  0.0      0     0 ?        S    ene14   0:00 [watchdog/1]
 root        12  0.0  0.0      0     0 ?        S    ene14   0:00 [migration/1]
 root        13  0.0  0.0      0     0 ?        S    ene14   0:00 [ksoftirqd/1]
-</code></pre><p>Those are usually kernel processes, and you can safely assume that no user has started them. </p>
-<p>If you want to monitor processes in real time you can use <code>top</code> or <code>htop</code>. <code>top</code> comes preinstalled on most distros. But <code>htop</code> is really a lot nicer.</p>
-<p>For <code>htop</code> the F1-10 keys might trigger OS-events. So you can use the shortcuts instead.</p>
+</code></pre><p>Questi sono generalmente processi del kernel e puoi tranquillamente supporre che nessun utente li abbia avviati. </p>
+<p>Se vuoi monitorare i processi in tempo reale puoi usarli <code>top</code> o <code>htop</code>. <code>top</code> viene preinstallato sulla maggior parte delle distribuzioni. Ma <code>htop</code> è davvero molto più bello.</p>
+<p>Per <code>htop</code> the F1-10 le chiavi potrebbero attivare eventi del sistema operativo. Quindi puoi usare le scorciatoie invece.</p>
 <pre><code>Shortcut Key    Function Key    Description
 h                    F1           Invoke htop Help
 S                    F2           Htop Setup Menu
