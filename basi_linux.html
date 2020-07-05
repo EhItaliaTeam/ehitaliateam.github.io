@@ -1591,16 +1591,16 @@ find / -name file 2&gt;/dev/null
 <h3 id="stdin">Stdin</h3>
 <p> Stdin sono i dati che vengono inseriti nel programma. Un esempio di un programma che richiede dati stdin è <code> cp </code>. Affinché il programma possa fare qualsiasi cosa, ha bisogno di dati di input. Ad esempio <code> cp file1 copy_of_file1 </code>. Qui <code> file1 </code> e <code> copy_of_file1 </code> è lo stdin. </p>
 <p> Quindi lo Stdin predefinito proviene dal file STDIN che è una rappresentazione di file di testo dell'input da tastiera. Ma spesso non vogliamo inserire elementi dalla tastiera, a volte vogliamo inserire qualcosa in un programma che proviene da un altro file. Questo è quando possiamo usare il simbolo di reindirizzamento: <code> & gt; </code>. </ P>
-<p> Quindi un esempio potrebbe essere <code> cat & lt; my_text_file.txt </ code>. I dati da my_text_file.txt verranno ora utilizzati come input anziché come input da tastiera. </ P>
-<p> Il descrittore di file per <strong> stdin </strong> è: <strong>0</strong> </p>
+<p>Un altro esempio potrebbe essere  <code>cat &lt; my_text_file.txt</code>.I dati da   my_text_file.txt verranno usati come input invece della tastiera. </p>
+<p> Il descrittore di file per <strong> stdin </strong> è: <strong>0</strong></p>
 <h3 id="stdout">Stdout</h3>
-<p>Stdout is the data that get ouputed from the program.
-For example, when you use the command <code>cat file1</code> that data/text that gets outputed is the stdout The same with the program <code>ls</code>. Not all programs have stdout. For example when you use <code>mv</code> or <code>cp</code> successfully you get no stdout back from the program.</p>
-<p>The stdout can be redirected to another file by using these symbols <code>&gt;</code> and <code>&gt;&gt;</code>. So now we can do the following:</p>
+<p>Stdout sono i dati che vengono estrapolati dal programma.
+Per esempio, quando usiamo il comando <code>cat file1</code> quel dato/text che viene emesso è lo stdout. Lo stesso con il programma <code>ls</code>. Non tutti i programmi hanno stdout. Per esempio quando usiamo  <code>mv</code> or <code>cp</code> non si ottiene alcun ritorno dal programma.</p>
+<p>Il stdout puo' essere reindirizzato su file usando il simbolo <code>&gt;</code> and <code>&gt;&gt;</code>. Quindi possiamo digitare:</p>
 <pre><code>ls &gt; result_of_ls.txt
-# now the result will be written to the file result_of_ls.txt
+# ora il risultato viene scritto sul file result_of_ls.txt
 ls &gt;&gt; result_of_ls.txt
-# This will append the data to the bottom of the file result_of_ls.txt
+# Questo scrive in modalita' append il dato sul file result_of_ls.txt
 </code></pre><p>Another incredibly useful feature is the <strong>pipe</strong> feature, reprsented with this symbol <code>|</code>. It will take the stdout and redirect it into another program. Here is an example:</p>
 <pre><code class="lang-bash">ls -la | less
 </code></pre>
