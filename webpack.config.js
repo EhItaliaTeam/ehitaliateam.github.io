@@ -33,6 +33,9 @@ module.exports = {
       },
     ]
   },
+  // resolve: {
+  //   extensions: ['*', '.js']
+  // },
   mode: 'development',
   node: {
     __dirname: false
