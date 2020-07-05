@@ -1589,10 +1589,10 @@ find / -name file 2&gt;/dev/null
 <h2 id="2-editing-text">2. Modifica del testo</h2>
 <pPrima di tutto, chiariamo qualcosa sugli stream standard o sugli I / O-stream. I flussi standard sono i flussi utilizzati per interagire tra l'utente del computer umano e la macchina. Esistono tre flussi standard: input standard (stdin), output standard (stdout) ed errore standard (stderr). Il flusso stdin può essere visto come un'astrazione dell'input della tastiera reale. Pertanto, quando si emette un comando / programma che richiede input, il programma non legge direttamente dall'input della tastiera, ma legge dal file STDIN.</p>
 <h3 id="stdin">Stdin</h3>
-<p>Stdin is the data that gets inputed into the program. An example of a program that requires stdin data is <code>cp</code>. In order for the program to do anything it needs input data. For example <code>cp file1 copy_of_file1</code>. Here <code>file1</code> and <code>copy_of_file1</code> is the stdin.</p>
-<p>So the default Stdin comes from the STDIN-file that is a text-file representation of the keyboard input. But often times we do not want to input stuff from the keyboard, sometimes we want to input something into a program that comes from another file. That is when we can use redirection symbol: <code>&gt;</code>. </p>
-<p>So an example could be <code>cat &lt; my_text_file.txt</code>. The data from my_text_file.txt will now be used as input instead of the keyboard input. </p>
-<p>The file descriptor for <strong>stdin</strong> is: <strong>0</strong></p>
+<p> Stdin sono i dati che vengono inseriti nel programma. Un esempio di un programma che richiede dati stdin è <code> cp </code>. Affinché il programma possa fare qualsiasi cosa, ha bisogno di dati di input. Ad esempio <code> cp file1 copy_of_file1 </code>. Qui <code> file1 </code> e <code> copy_of_file1 </code> è lo stdin. </p>
+<p> Quindi lo Stdin predefinito proviene dal file STDIN che è una rappresentazione di file di testo dell'input da tastiera. Ma spesso non vogliamo inserire elementi dalla tastiera, a volte vogliamo inserire qualcosa in un programma che proviene da un altro file. Questo è quando possiamo usare il simbolo di reindirizzamento: <code> & gt; </code>. </ P>
+<p> Quindi un esempio potrebbe essere <code> cat & lt; my_text_file.txt </ code>. I dati da my_text_file.txt verranno ora utilizzati come input anziché come input da tastiera. </ P>
+<p> Il descrittore di file per <strong> stdin </strong> è: <strong>0</strong> </p>
 <h3 id="stdout">Stdout</h3>
 <p>Stdout is the data that get ouputed from the program.
 For example, when you use the command <code>cat file1</code> that data/text that gets outputed is the stdout The same with the program <code>ls</code>. Not all programs have stdout. For example when you use <code>mv</code> or <code>cp</code> successfully you get no stdout back from the program.</p>
