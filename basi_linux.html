@@ -1601,8 +1601,8 @@ find / -name file 2&gt;/dev/null
         Ls & gt; & gt; result_of_ls.txt
         # Questo aggiungerà i dati in fondo al file result_of_ls.txt
         </code></pre> <p> Un'altra caratteristica incredibilmente utile è la <strong> pipe </strong>, rappresentata da questo simbolo <code> | </code>. Prende lo stdout e lo reindirizza in un altro programma. Ecco un esempio: </p>
-        <pre> <code class = "lang-bash"> ls -la | Di meno
-        </ Code> </ pre>                 
+        <pre> <code class = "lang-bash"> ls -la | less
+        </ Code> </pre>                 
         <p> Questo prenderà lo stdout da <code> ls -la </code> e lo inoltrerà / reindirizzerà nel programma <code> less </code>. Utilizzando la <strong> pipe </strong> ora puoi concatenare diversi comandi. </ P>                
          <p> Il descrittore di file per <strong> stdout </strong> è: <strong>1</strong> </p>               
         <h3 id="stderr">Stderr</h3>                
@@ -1615,7 +1615,7 @@ find / -name file 2&gt;/dev/null
             <pre> <code class = "lang-bash"> cp thisfiledoesnotexist aaaaaaaaaa & gt; result.txt
             cp: impossibile <span class = "hljs-built_in"> stat </span> <span class = "hljs-string"> & apos; thisfiledoesnotexist & apos; </span>: nessun file o directory
             <span class = "hljs-comment"> # Se ora esaminiamo result.txt scopriremo che è vuoto. Poiché il testo dell'errore che abbiamo ricevuto non può essere reindirizzato nel file di testo, poiché è stderr e non stdout. </span>
-            </ Code> </ pre>              
+            </ Code> </pre>              
             <h3 id="filters">Filters</h3>            
                         
                         
