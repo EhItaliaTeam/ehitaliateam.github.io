@@ -4,5 +4,7 @@
 
 .menu-entry__rect {}
 
-.menu-entry__text {}
+.menu-entry__text {
+    text-anchor: middle;
+}
 

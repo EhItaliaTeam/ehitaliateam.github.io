@@ -2,8 +2,10 @@ import * as d3 from 'd3';
 import entries from './menu.entry';
 
 const bootMenu = (container) => {
+
   // select container or append to container?
   // d3.select(container);
+
   const ENTRY_WIDTH = 150;
   const ENTRY_HEIGHT = 75;
   let margins = {
@@ -36,26 +38,13 @@ const bootMenu = (container) => {
       .attr('fill', 'green') // try radient
       .attr('class', 'menu-entry__rect');
 
-  const transformEntryText = (val, i, nodes) => {
-    console.log(`translate`);
-    // TODO: this need to be exectued after the render....
-    return `translate(20, 20)`;
-  };
-  const xPos = (val, i, nodes) => {
-    console.log(`xxx`);
-    return 25;
-  };
-  const yPos = (val, i, nodes) => {
-    console.log(`yyy`);
-    return (i * 20) + 20;
-  };
   menuEntries
     .append('text')
       .attr('class', 'menu-entry__text')
       .text(d => d.slug)
-      .attr("transform", transformEntryText)
-      .attr('x', xPos)
-      .attr('y', yPos);
+      // .attr("transform", () => {return `translate(${ENTRY_WIDTH/2}, ${ENTRY_HEIGHT/2})`});
+      .attr('x', () => {return parseInt(ENTRY_WIDTH/2);})
+      .attr('y', () => {return parseInt(ENTRY_HEIGHT/2) + 4;});
 
   return menu;
 };
