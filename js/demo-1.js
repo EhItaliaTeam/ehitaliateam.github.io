@@ -9,7 +9,7 @@
 
     function initHeader() {
         width = window.innerWidth;
-        height = 300;
+        height = 200;
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
@@ -98,7 +98,7 @@
 
     function resize() {
         width = window.innerWidth;
-        height = window.innerHeight;
+        height = 200;
         largeHeader.style.height = height+'px';
         canvas.width = width;
         canvas.height = height;
